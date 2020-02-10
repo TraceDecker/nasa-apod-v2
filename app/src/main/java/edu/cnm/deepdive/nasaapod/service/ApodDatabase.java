@@ -11,6 +11,7 @@ import edu.cnm.deepdive.nasaapod.model.dao.AccessDao;
 import edu.cnm.deepdive.nasaapod.model.dao.ApodDao;
 import edu.cnm.deepdive.nasaapod.model.entity.Access;
 import edu.cnm.deepdive.nasaapod.model.entity.Apod;
+import edu.cnm.deepdive.nasaapod.model.entity.Apod.MediaType;
 import edu.cnm.deepdive.nasaapod.service.ApodDatabase.Converters;
 import java.util.Date;
 
@@ -19,7 +20,7 @@ import java.util.Date;
     version = 1,
     exportSchema = true
 )
-@TypeConverters(Converters.class)
+@TypeConverters({Converters.class, Apod.MediaType.class})
 public abstract class ApodDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "apod_db";
