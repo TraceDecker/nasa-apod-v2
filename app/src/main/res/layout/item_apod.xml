@@ -10,6 +10,8 @@
     android:id="@+id/thumbnail"
     android:layout_width="@dimen/thumbnail_width"
     android:layout_height="wrap_content"
+    android:scaleType="center"
+    android:adjustViewBounds="true"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +27,7 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toTopOf="@+id/access"
     app:layout_constraintEnd_toStartOf="@+id/date"
-    app:layout_constraintHorizontal_weight="4"
+    app:layout_constraintHorizontal_weight="@integer/title_horizontal_weight"
     app:layout_constraintVertical_chainStyle="packed"
     android:layout_marginEnd="@dimen/title_margin_end"
     android:layout_marginBottom="@dimen/title_margin_bottom"/>
@@ -37,7 +39,7 @@
     app:layout_constraintStart_toEndOf="@id/title"
     app:layout_constraintBaseline_toBaselineOf="@+id/title"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_weight="3"/>
+    app:layout_constraintHorizontal_weight="@integer/date_horizontal_weight"/>
 
   <TextView
     android:id="@+id/access"
