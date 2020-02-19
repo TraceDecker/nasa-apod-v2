@@ -44,12 +44,14 @@ public class MainActivity extends AppCompatActivity {
     viewModel.getApod().observe(this, (apod) -> {
       calendar.setTime(apod.getDate());
       if (navController.getCurrentDestination().getId() != R.id.navigation_image) {
+        navView.setSelectedItemId(R.id.navigation_image);
         navController.navigate(R.id.navigation_image, null, navOptions);
       }
     });
   }
 
   private void setupNavigation() {
+    // TODO Eliminate back stack.
     navOptions = new NavOptions.Builder()
         .setPopUpTo(R.id.mobile_navigation, true)
         .build();

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  xmlns:tools="http://schemas.android.com/tools"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  tools:content=".controller.InfoFragment">
+  tools:context=".controller.InfoFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -19,6 +20,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/date_label"
+      style="@style/LinkLabel"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
 
@@ -35,12 +37,14 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
+      style="@style/BodyText"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toBottomOf="@id/date"/>
 
     <TextView
       android:id="@+id/web_url_label"
+      style="@style/LinkLabel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/web_url_label"
@@ -52,6 +56,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/url_label"
+      style="@style/LinkLabel"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/web_url"/>
 
@@ -60,6 +65,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/hd_url_label"
+      style="@style/LinkLabel"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/url"/>
 
@@ -73,6 +79,7 @@
 
     <TextView
       android:id="@+id/web_url"
+      android:autoLink="web"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
@@ -82,6 +89,7 @@
 
     <TextView
       android:id="@+id/url"
+      android:autoLink="web"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
@@ -91,6 +99,7 @@
 
     <TextView
       android:id="@+id/hd_url"
+      android:autoLink="web"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:textIsSelectable="true"
